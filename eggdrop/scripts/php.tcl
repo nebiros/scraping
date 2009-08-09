@@ -20,6 +20,7 @@ package require ncgi
 # Public command.
 bind pub - !php pub_php_docs
 bind pub - !function pub_php_function
+bind pub - !func pub_php_function
 
 # Search into the php docs.
 proc pub_php_docs { nick uhost hand chan arg } {
@@ -34,11 +35,11 @@ proc pub_php_docs { nick uhost hand chan arg } {
 	    return 0
   	}
 
-	search $chan $nick $arg
+	search_docs $chan $nick $arg
 }
 
 # Search into online docs.
-proc search { chan nick search } {
+proc search_docs { chan nick search } {
 	global php_config
 
 	regsub -all " " $search "+" search
@@ -102,11 +103,11 @@ proc pub_php_function { nick uhost hand chan arg } {
 	    return 0
   	}
 
-	function $chan $nick $arg
+	process_function_page $chan $nick $arg
 }
 
 # Process function page.
-proc function { chan nick search } {
+proc process_function_page { chan nick search } {
 	regsub -all " " $search "+" search
 
 	set url http://www.php.net/manual/en/function.$search.php

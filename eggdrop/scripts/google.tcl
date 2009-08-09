@@ -33,11 +33,11 @@ proc pub_google { nick uhost hand chan arg } {
 	    return 0
   	}
 
-	search $chan $nick $arg
+	search_google $chan $nick $arg
 }
 
 # Search on google and display results.
-proc search { chan nick search } {
+proc search_google { chan nick search } {
 	global google_config
 
 	regsub -all " " $search "+" search
