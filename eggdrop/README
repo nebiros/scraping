@@ -1,0 +1,11 @@
+Some eggdrop scripts.
+
+* google.tcl
+Search on google, "define" word works too.
+
+Usage: !google <SEARCH TERMS> or !google define: <TERM>
+
+* php.tcl
+Search on php online documentation, scraping for functions description was added.
+
+Usage: !php <SEARCH TERMS> or !function <FUNCTION NAME>
