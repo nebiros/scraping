@@ -1,3 +1,8 @@
+#
+# PHP Scraper
+#
+# Juan Felipe Alvarez Saldarriaga <jfalvarez at vesifront dot org>
+
 # Max results.
 set php_config(max) 5
 
@@ -178,4 +183,4 @@ proc process_request { url } {
 
 # Loaded.
 putlog "php.tcl \[ OK \]"
-putlog "PHP Wrapper $php_config(ver) - Loaded"
+putlog "PHP Scraper $php_config(ver) - Loaded"

@@ -147,4 +147,4 @@ proc striptags str {
 
 # Loaded.
 putlog "google.tcl \[ OK \]"
-putlog "Google Wrapper $google_config(ver) - Loaded"
+putlog "Google Scraper $google_config(ver) - Loaded"
