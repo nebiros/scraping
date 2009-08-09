@@ -76,7 +76,7 @@ proc search { chan nick search } {
     set tidy [split $tidy "\n"]
     catch { close $fp }
 
-    # file delete -force -- $tmp_file
+    file delete -force -- $tmp_file
 
 	switch $type {
 		search {
