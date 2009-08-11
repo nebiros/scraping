@@ -110,6 +110,7 @@ proc pub_php_function { nick uhost hand chan arg } {
 proc process_function_page { chan nick search } {
 	regsub -all " " $search "+" search
 
+    set search [string map {_ -} $search]
 	set url http://www.php.net/manual/en/function.$search.php
 
 	set tidy [process_request $url]
